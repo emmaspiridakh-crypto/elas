@@ -485,7 +485,7 @@ class ApplicationSelect(discord.ui.Select):
         if ex: return await interaction.response.send_message(f"Έχεις ήδη: {ex.mention}", ephemeral=True)
         ow={guild.default_role: discord.PermissionOverwrite(view_channel=False),
             author: discord.PermissionOverwrite(view_channel=True, send_messages=True, read_message_history=True)}
-        for rid in : ARXIGOS_ID
+        for rid in :ARXIGOS_ID
             r=guild.get_role(rid)
             if r: ow[r]=discord.PermissionOverwrite(view_channel=True, send_messages=True, read_message_history=True)
         ch=await guild.create_text_channel(name=cname, category=cat, overwrites=ow)
