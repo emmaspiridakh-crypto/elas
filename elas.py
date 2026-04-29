@@ -22,120 +22,88 @@ def keep_alive():
 TOKEN = os.getenv("TOKEN")
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
-GUILD_ID = 1490079978300117212
+GUILD_ID = 1485699924640399534
 
 # ── ROLE IDs ──────────────────────────────────────────────────
-FOUNDER_ROLE_ID        = 1490084094749573151
-OWNER_ID               = 1490084247682285699
-CO_OWNER_ID            = 1490136469287993464
-DEVELOPER_ID           = 1490134524221460621
-MANAGER_ID             = 1490134503249936525
-STAFF_ID               = 1490088402656170045
-JOBORG_ID              = 1490338701799194767
-APPLICATION_MANAGER_ID = 1490134509830803507
-DUTY_ROLE_ID           = 1490338840395649266
-AUTOROLE_ID            = 1490134521687969864
-DONATE_MANAGER_ID      = 1490134506793861193
+ARXIGOS_ID = 1485699924778553515
+YPARXIGOS_ID = 1485699924749451444
+DIOIKHTHS_ID = 1485699924749451439
+YPODIOIKHTHS_ID = 1485699924749451438
+DUTY_ROLE_ID           = 1499093540074946743
+AUTOROLE_ID            = 1485699924661113076
 
-WHITELIST_MANAGER_ROLE_ID    = 1490339511186489437
-WHITELIST_ROLE_ID            = 1490339131341930577
-STAFF_APP_ROLE_ID            = 1490134518768730204
-MANAGER_APP_ROLE_ID          = 1490134518768730204
-WHITELIST_RESULTS_CHANNEL_ID = 1490340158283972800
-WHITELIST_CATEGORY_ID        = 1490340549125865683
-STAFF_RESULTS_CHANNEL_ID     = 1490340185576181770
-STAFF_CATEGORY_ID            = 1490341195090755844
-MANAGER_RESULTS_CHANNEL_ID   = 1490340217687769259
-MANAGER_CATEGORY_ID          = 1490341277567549550
-DUTY_LOG_CHANNEL_ID          = 1490341619059261510
-DUTY_LEADERBOARD_CHANNEL_ID  = 1490341549719162971
-SECURITY_LOG_CHANNEL_ID      = 1490340271156756490
-SUGGESTION_CHANNEL_ID        = 1491916043709579284
-REVIEW_CHANNEL_ID            = 1490702704782217381
-INVITE_LOG_CHANNEL_ID        = 1490493231107145820
+STAFF_APP_ROLE_ID            = 1485699924678152245
+MANAGER_APP_ROLE_ID          = 1485699924678152245
+ELAS_RESULTS_CHANNEL_ID     = 1485699925537853508
+ELAS_CATEGORY_ID            = 1499094718431367208
+LIMENIKO_RESULTS_CHANNEL_ID   = 1485699925537853508
+LIMENIKO_CATEGORY_ID          = 1499094718431367208
+DUTY_LOG_CHANNEL_ID          = 1499096003935080628
+SECURITY_LOG_CHANNEL_ID      = 1499096087330295819
 
-MAIN_TICKET_CATEGORY_ID   = 1490134558182473959
-JOB_TICKET_CATEGORY_ID    = 1490134559315197992
-DONATE_TICKET_CATEGORY_ID = 1495232331131125791
-TEMP_VOICE_CATEGORY_ID    = 1490134557272313947
-TEMP_VOICE_CHANNEL_ID     = 1490134590608642179
+MAIN_TICKET_CATEGORY_ID   = 1486265966336806982
 
-BOT_LOG_ID                    = 1490134570056683670
-MESSAGE_EDIT_LOG_CHANNEL_ID   = 1490134573986873475
-MESSAGE_DELETE_LOG_CHANNEL_ID = 1490134573986873475
-MEMBER_JOIN_LOG_CHANNEL_ID    = 1490134577933582387
-MEMBER_LEAVE_LOG_CHANNEL_ID   = 1490134577933582387
-ROLE_UPDATE_LOG_CHANNEL_ID    = 1491807147133108294
-VOICE_LOG_CHANNEL_ID          = 1490134572225134702
-CHANNEL_CREATE_LOG_CHANNEL_ID = 1491807225084121321
-CHANNEL_DELETE_LOG_CHANNEL_ID = 1491807225084121321
-ROLE_CREATE_LOG_CHANNEL_ID    = 1491807147133108294
-ROLE_DELETE_LOG_CHANNEL_ID    = 1491807147133108294
-TICKET_LOG_ID                 = 1490134569025011784
+MESSAGE_EDIT_LOG_CHANNEL_ID   = 1499096345300963489
+MESSAGE_DELETE_LOG_CHANNEL_ID = 1499096345300963489
+MEMBER_JOIN_LOG_CHANNEL_ID    = 1499095433794814163
+MEMBER_LEAVE_LOG_CHANNEL_ID   = 1499095433794814163
+ROLE_UPDATE_LOG_CHANNEL_ID    = 1492445223584923680
+VOICE_LOG_CHANNEL_ID          = 1492442139446083714
+CHANNEL_CREATE_LOG_CHANNEL_ID = 1492443807579377754
+CHANNEL_DELETE_LOG_CHANNEL_ID = 1492443807579377754
+ROLE_CREATE_LOG_CHANNEL_ID    = 1492445223584923680
+ROLE_DELETE_LOG_CHANNEL_ID    = 1492445223584923680
+TICKET_LOG_ID                 = 1499096577346895892
 
-MEMBERS_CHANNEL_ID = 1490134565145022544
-BOTS_CHANNEL_ID    = 1490134568009990154
-ONLINE_CHANNEL_ID  = 1490134566558502994
-BOOSTS_CHANNEL_ID  = 1490134571147071538
 
-APPLICATION_MANAGER_ROLES = [FOUNDER_ROLE_ID, OWNER_ID, CO_OWNER_ID, WHITELIST_MANAGER_ROLE_ID, APPLICATION_MANAGER_ID]
+APPLICATION_MANAGER_ROLES = [ARXIGOS_ID]
 
-SERVER_THUMBNAIL_URL = "https://i.imgur.com/F6vMnVL.jpeg"
-BANNER_SUPPORT  = "https://i.imgur.com/YL0btaL.jpeg"
-BANNER_JOB      = "https://i.imgur.com/YL0btaL.jpeg"
-BANNER_APP      = "https://i.imgur.com/YL0btaL.jpeg"
-BANNER_SUGGEST  = "https://i.imgur.com/YL0btaL.jpeg"
-BANNER_REVIEW   = "https://i.imgur.com/YL0btaL.jpeg"
-BANNER_DONATE   = "https://i.imgur.com/YL0btaL.jpeg"
+SERVER_THUMBNAIL_URL = "https://i.imgur.com/LxZwMHg.jpeg"
+BANNER_SUPPORT  = "https://i.imgur.com/LxZwMHg.jpeg"
+BANNER_APP      = "https://i.imgur.com/LxZwMHg.jpeg"
 
-WHITELIST_QUESTIONS = [
-    "Ποιο είναι το όνομα στο roblox και η ηλικία σου (IRL);",
-    "Δώσε μια σύντομη περιγραφή του χαρακτήρα σου in game.",
-    "Ποιο είναι το επάγγελμα που θέλεις να ακολουθήσει ο χαρακτήρας σου;",
-    "Τι είναι το Powergaming; Δώσε παράδειγμα.",
-    "Τι είναι το Metagaming; Δώσε παράδειγμα.",
-    "Πώς αντιδράς όταν κάποιος κάνει RDM/VDM πάνω σου;",
-    "Τι είναι το FailRP; Δώσε παράδειγμα.",
-    "Τι περιμένεις από την κοινότητα και τι μπορείς να προσφέρεις;"
+ELAS_QUESTIONS = [
+    "Το αληθινό όνομα σου?",
+    "Η αληθινή ηλικία σου?",
+    "Τι πιστεύεις ότι είναι η αστυνομία σε έναν server? Εξήγησε την απάντησή σου.?",
+    "Έστω ότι γίνεται fail από κάποιον μπροστά σου. Τι κάνεις?",
+    "Γνωρίζεις τους κανονισμούς του Server?",
+    "Έχεις προϋπηρεσία ως αστυνομικός?",
+    "Τι σημαίνει για εσένα ιεραρχία?",
+    "Πες μας 5 πράγματα που πιστεύεις ότι πρέπει να ξέρουμε για σένα."
 ]
-STAFF_QUESTIONS = [
-    "Πόσο χρονών είσαι?","Πώς σε λένε στο roblox?","Πόσες ώρες θα μπορείς να είσαι on duty call?",
-    "Έχεις εμπειρία απο staff? Αν ναι που?","Τι θα κάνεις αν φίλος σου κάνει abuse perms?",
-    "Τι θα κανεις αν ένα member προσβάλει κάποιο staff?","Τι θα κανεις αν υπάρχουν πολλά άτομα στο support?",
-    "Τι βήματα θα ακολουθήσεις αν αναφερθεί ένα περιστατικό in game?",
-    "Τι θα κάνεις αν αναφερθεί RDM/VDM?","Γιατί να επιλέξουμε εσένα?"
+LIMENIKO_QUESTIONS = [
+    "Το αληθινό όνομα σου?",
+    "Η αληθινή ηλικία σου?",
+    "Τι πιστεύεις ότι είναι το λιμενικό σε έναν server? Εξήγησε την απάντησή σου.?",
+    "Έστω ότι γίνεται fail από κάποιον μπροστά σου. Τι κάνεις?",
+    "Γνωρίζεις τους κανονισμούς του Server?",
+    "Έχεις προϋπηρεσία ως λιμενικό?",
+    "Τι σημαίνει για εσένα ιεραρχία?",
+    "Πες μας 5 πράγματα που πιστεύεις ότι πρέπει να ξέρουμε για σένα."
 ]
-MANAGER_QUESTIONS = [
-    "Πόσο χρονών είσαι?","Πώς σε λένε στο roblox?","Πόσες ώρες θα μπορείς να είσαι on duty?",
-    "Τι θέση manager θέλεις?","Έχεις εμπειρία management? Αν ναι που?",
-    "Τι θα κάνεις αν τα μέλη τσακώνονται?","Πως θα κρατήσεις την ομαδικότητα?",
-    "Τι θα κάνεις αν ένα member/staff δεν υπακούει τους κανόνες?",
-    "Γνωρίζεις ότι σε ticket δεν απαντάς αν έχει ήδη απαντηθεί απο κάποιον?",
-    "Τι θα κάνεις αν υπάρχουν πολλά άτομα στο support?","Γιατί να επιλέξουμε εσένα?"
-]
-
 # ── PERMISSION HELPERS ────────────────────────────────────────
 def is_founder(u):
-    return any(r.id == FOUNDER_ROLE_ID for r in u.roles)
+    return any(r.id == ARXIGOS_ID for r in u.roles)
 
 def is_owner_or_above(u):
-    return any(r.id in (FOUNDER_ROLE_ID, OWNER_ID, CO_OWNER_ID) for r in u.roles)
+    return any(r.id in (ARXIGOS_ID, YPARXIGOS_ID, DIOIKHTHS_ID, YPODIOIKHTHS_ID) for r in u.roles)
 
 def is_owner_or_founder(u):
-    return any(r.id in (FOUNDER_ROLE_ID, OWNER_ID, CO_OWNER_ID) for r in u.roles)
+    return any(r.id in (ARXIGOS_ID, YPARXIGOS_ID, DIOIKHTHS_ID, YPODIOIKHTHS_ID) for r in u.roles)
 
 def is_owner_or_coowner(u):
-    return any(r.id in (FOUNDER_ROLE_ID, OWNER_ID, CO_OWNER_ID) for r in u.roles)
+    return any(r.id in (ARXIGOS_ID, YPARXIGOS_ID, DIOIKHTHS_ID, YPODIOIKHTHS_ID) for r in u.roles)
 
 def can_manage_applications(u):
-    return any(r.id in APPLICATION_MANAGER_ROLES for r in u.roles)
+    return any(r.id in ARXIGOS_ID for r in u.roles)
 
 def has_staff_permissions(m):
     return (m.guild_permissions.kick_members or m.guild_permissions.ban_members or
-            any(r.id in (STAFF_ID, MANAGER_ID, OWNER_ID, CO_OWNER_ID, FOUNDER_ROLE_ID) for r in m.roles))
+            any(r.id in (ARXIGOS_ID, YPARXIGOS_ID) for r in m.roles))
 
 def is_staff_or_manager(m):
-    return any(r.id in (STAFF_ID, MANAGER_ID, OWNER_ID, CO_OWNER_ID, FOUNDER_ROLE_ID) for r in m.roles)
+    return any(r.id in (ARXIGOS_ID, YPARXIGOS_ID, DIOIKHTHS_ID, YPODIOIKHTHS_ID) for r in m.roles)
 
 # ── DATA FILES ────────────────────────────────────────────────
 DUTY_FILE = "duty.json"
@@ -161,14 +129,6 @@ TOKEN_PATTERN = re.compile(r"[MNO][a-zA-Z0-9_-]{23,25}\.[a-zA-Z0-9_-]{6}\.[a-zA-
 
 locked_applications = set()
 
-INVITE_FILE = "invites.json"
-def load_invite_data():
-    if not os.path.exists(INVITE_FILE): open(INVITE_FILE,"w").write("{}")
-    return json.load(open(INVITE_FILE))
-def save_invite_data(d): json.dump(d, open(INVITE_FILE,"w"), indent=4)
-invite_data  = load_invite_data()
-invite_cache = {}
-
 # ── SECURITY ALERT ────────────────────────────────────────────
 async def send_security_alert(guild, embed, ping=True):
     sec_log = bot.get_channel(SECURITY_LOG_CHANNEL_ID)
@@ -176,26 +136,6 @@ async def send_security_alert(guild, embed, ping=True):
     founder_role = guild.get_role(FOUNDER_ROLE_ID)
     content = founder_role.mention if (ping and founder_role) else None
     asyncio.create_task(sec_log.send(content=content, embed=embed))
-
-# ── VOICE COUNTERS ────────────────────────────────────────────
-async def update_voice_channels(guild):
-    for ch_id, name in [
-        (MEMBERS_CHANNEL_ID, f"👤 Members: {sum(1 for m in guild.members if not m.bot)}"),
-        (BOTS_CHANNEL_ID,    f"🤖 Bots: {sum(1 for m in guild.members if m.bot)}"),
-        (ONLINE_CHANNEL_ID,  f"🟢 Online: {sum(1 for m in guild.members if m.status != discord.Status.offline)}"),
-        (BOOSTS_CHANNEL_ID,  f"🚀 Boosts: {guild.premium_subscription_count}"),
-    ]:
-        ch = guild.get_channel(ch_id)
-        if ch:
-            try: await ch.edit(name=name)
-            except: pass
-
-@bot.event
-async def on_presence_update(before, after): await update_voice_channels(after.guild)
-@bot.event
-async def on_guild_update(before, after):
-    if before.premium_subscription_count != after.premium_subscription_count:
-        await update_voice_channels(after)
 
 # ══════════════════════════════════════════════════════════════
 #  LOGS
@@ -205,34 +145,6 @@ async def on_voice_state_update(member, before, after):
     guild = member.guild
     log   = bot.get_channel(VOICE_LOG_CHANNEL_ID)
 
-    if after.channel and after.channel.id == TEMP_VOICE_CHANNEL_ID:
-        cat = guild.get_channel(TEMP_VOICE_CATEGORY_ID)
-        tc  = await guild.create_voice_channel(name=f"{member.name}'s Support", category=cat)
-        try: await member.move_to(tc)
-        except: pass
-        if log:
-            e = discord.Embed(title="📞 Support Channel Created", color=discord.Color.blue(), timestamp=discord.utils.utcnow())
-            e.set_thumbnail(url=member.display_avatar.url)
-            e.add_field(name="👤 Χρήστης", value=f"{member.mention} (`{member.id}`)", inline=True)
-            e.add_field(name="📁 Κανάλι",  value=f"**{tc.name}**", inline=True)
-            e.set_footer(text=f"Glorious Elas • Voice Log | Channel ID: {tc.id}")
-            await log.send(embed=e)
-
-    if (before.channel and before.channel.category_id == TEMP_VOICE_CATEGORY_ID
-            and before.channel.id != TEMP_VOICE_CHANNEL_ID
-            and len(before.channel.members) == 0):
-        try:
-            nc = before.channel.name
-            await before.channel.delete()
-            if log:
-                e = discord.Embed(title="🗑️ Support Channel Deleted", color=discord.Color.red(), timestamp=discord.utils.utcnow())
-                e.add_field(name="📁 Κανάλι", value=f"**{nc}**", inline=True)
-                e.add_field(name="📌 Λόγος",  value="Κανένας μέσα", inline=True)
-                e.set_footer(text="Glorious Elas • Voice Log")
-                await log.send(embed=e)
-        except: pass
-
-    if not log: return
 
     if not before.channel and after.channel:
         e = discord.Embed(title="🔊 Voice Join", color=discord.Color.green(), timestamp=discord.utils.utcnow())
@@ -421,15 +333,15 @@ class MainTicketSelect(discord.ui.Select):
             author: discord.PermissionOverwrite(view_channel=True, send_messages=True, read_message_history=True)}
         v=self.values[0]
         if v=="Ανώτατη Διοίκηση":
-            rids=[OWNER_ID,CO_OWNER_ID,FOUNDER_ROLE_ID]
+            rids=[ARXIGOS_ID, YPARXIGOS_ID]
             name=f"anotati-{author.name}".replace(" ","-").lower()
             tt="Ανώτατη Διοίκηση"
         elif v=="Support":
-            rids=[STAFF_ID,MANAGER_ID,OWNER_ID,CO_OWNER_ID,FOUNDER_ROLE_ID]
+            rids=[ARXIGOS_ID, YPARXIGOS_ID, DIOIKHTHS_ID, YPODIOIKHTHS_ID]
             name=f"support-{author.name}".replace(" ","-").lower()
             tt="Support"
         else:
-            rids=[STAFF_ID,MANAGER_ID,OWNER_ID,CO_OWNER_ID,FOUNDER_ROLE_ID]
+            rids=[ARXIGOS_ID, YPARXIGOS_ID, DIOIKHTHS_ID, YPODIOIKHTHS_ID]
             name=f"other-{author.name}".replace(" ","-").lower()
             tt="Other"
         for rid in rids:
@@ -437,7 +349,7 @@ class MainTicketSelect(discord.ui.Select):
             if r: ow[r]=discord.PermissionOverwrite(view_channel=True, send_messages=True, read_message_history=True)
         ch=await guild.create_text_channel(name=name, category=cat, overwrites=ow)
         e=discord.Embed(title=f"🎫 {tt}",
-            description=f"Γεια σου {author.mention}!\n\n**Το staff θα σε εξυπηρετήσει σύντομα.**\nΠαρακαλώ περίγραψε το αίτημά σου.\n\n*One active ticket at a time.*",
+            description=f"Γεια σου {author.mention}!\n\n* θα σε εξυπηρετήσουμε σύντομα.**\nΠαρακαλώ περίγραψε το αίτημά σου.\n\n*One active ticket at a time.*",
             color=discord.Color.from_rgb(20,20,40))
         e.set_image(url=BANNER_SUPPORT); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
         e.set_footer(text="Glorious Elas • Support System")
@@ -455,88 +367,6 @@ class MainTicketSelect(discord.ui.Select):
 
 class MainTicketPanel(discord.ui.View):
     def __init__(self): super().__init__(timeout=None); self.add_item(MainTicketSelect())
-
-class JobTicketSelect(discord.ui.Select):
-    def __init__(self):
-        opts=[
-            discord.SelectOption(label="Ελληνική Αστυνομία", description="Αίτηση για Ελληνική Αστυνομία", emoji="👮"),
-            discord.SelectOption(label="Λιμενικό",            description="Αίτηση για Λιμενικό",           emoji="⚓"),
-        ]
-        super().__init__(custom_id="job_ticket_select", placeholder="Επίλεξε υπηρεσία...", min_values=1, max_values=1, options=opts)
-
-    async def callback(self, interaction):
-        guild=interaction.guild; author=interaction.user
-        cat=guild.get_channel(JOB_TICKET_CATEGORY_ID)
-        if not cat: return await interaction.response.send_message("Κατηγορία δεν βρέθηκε.", ephemeral=True)
-        ow={guild.default_role: discord.PermissionOverwrite(view_channel=False),
-            author: discord.PermissionOverwrite(view_channel=True, send_messages=True, read_message_history=True)}
-        v=self.values[0]
-        if v=="Ελληνική Αστυνομία":
-            tt="Ελληνική Αστυνομία"
-            name=f"astynomia-{author.name}".replace(" ","-").lower()
-        else:
-            tt="Λιμενικό"
-            name=f"limeniko-{author.name}".replace(" ","-").lower()
-        r=guild.get_role(JOBORG_ID)
-        if r: ow[r]=discord.PermissionOverwrite(view_channel=True, send_messages=True, read_message_history=True)
-        ch=await guild.create_text_channel(name=name, category=cat, overwrites=ow)
-        e=discord.Embed(title=f"🎫 {tt}",
-            description=f"Γεια σου {author.mention}!\n\n**Job Manager θα σε εξυπηρετήσει.**\n\n*One active ticket at a time.*",
-            color=discord.Color.from_rgb(20,20,40))
-        e.set_image(url=BANNER_JOB); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
-        e.set_footer(text="Glorious Elas • Job System")
-        await ch.send(embed=e, view=TicketCloseView())
-        lc=guild.get_channel(TICKET_LOG_ID)
-        if lc:
-            le=discord.Embed(title="📂 Νέο Job Ticket", color=discord.Color.blue(), timestamp=discord.utils.utcnow())
-            le.set_thumbnail(url=author.display_avatar.url)
-            le.add_field(name="👤 Από",    value=author.mention, inline=True)
-            le.add_field(name="📋 Τύπος", value=tt,             inline=True)
-            le.add_field(name="📁 Κανάλι",value=ch.mention,     inline=True)
-            le.set_footer(text="Glorious Elas • Ticket Log")
-            await lc.send(embed=le)
-        await interaction.response.send_message(f"Δημιουργήθηκε: {ch.mention}", ephemeral=True)
-
-class JobTicketPanel(discord.ui.View):
-    def __init__(self): super().__init__(timeout=None); self.add_item(JobTicketSelect())
-
-class DonateTicketSelect(discord.ui.Select):
-    def __init__(self):
-        opts=[discord.SelectOption(label="Make a Donate", description="Κάνε donate στον server", emoji="💎")]
-        super().__init__(custom_id="donate_ticket_select", placeholder="Επίλεξε κατηγορία...", min_values=1, max_values=1, options=opts)
-
-    async def callback(self, interaction):
-        guild=interaction.guild; author=interaction.user
-        cat=guild.get_channel(DONATE_TICKET_CATEGORY_ID)
-        if not cat: return await interaction.response.send_message("Κατηγορία δεν βρέθηκε.", ephemeral=True)
-        ow={guild.default_role: discord.PermissionOverwrite(view_channel=False),
-            author: discord.PermissionOverwrite(view_channel=True, send_messages=True, read_message_history=True)}
-        for rid in [FOUNDER_ROLE_ID, OWNER_ID, DONATE_MANAGER_ID]:
-            r=guild.get_role(rid)
-            if r: ow[r]=discord.PermissionOverwrite(view_channel=True, send_messages=True, read_message_history=True)
-        name=f"donate-{author.name}".replace(" ","-").lower()
-        ch=await guild.create_text_channel(name=name, category=cat, overwrites=ow)
-        e=discord.Embed(title="💎 Donate Ticket",
-            description=(f"Γεια σου {author.mention}!\n\n"
-                         "**Ευχαριστούμε για το ενδιαφέρον σου να κάνεις donate!**\n\n"
-                         "Παρακαλώ περίγραψε τι donate θέλεις να κάνεις και ένας από την ομάδα μας θα σε εξυπηρετήσει σύντομα.\n\n"
-                         "*One active ticket at a time.*"),
-            color=discord.Color.gold())
-        e.set_image(url=BANNER_DONATE); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
-        e.set_footer(text="Glorious Elas • Donate System")
-        await ch.send(embed=e, view=TicketCloseView())
-        lc=guild.get_channel(TICKET_LOG_ID)
-        if lc:
-            le=discord.Embed(title="💎 Νέο Donate Ticket", color=discord.Color.gold(), timestamp=discord.utils.utcnow())
-            le.set_thumbnail(url=author.display_avatar.url)
-            le.add_field(name="👤 Από",    value=author.mention, inline=True)
-            le.add_field(name="📁 Κανάλι",value=ch.mention,     inline=True)
-            le.set_footer(text="Glorious Elas • Ticket Log")
-            await lc.send(embed=le)
-        await interaction.response.send_message(f"Δημιουργήθηκε: {ch.mention}", ephemeral=True)
-
-class DonateTicketPanel(discord.ui.View):
-    def __init__(self): super().__init__(timeout=None); self.add_item(DonateTicketSelect())
 
 # ══════════════════════════════════════════════════════════════
 #  APPLICATION SYSTEM
@@ -560,7 +390,7 @@ class ReasonModal(discord.ui.Modal):
             oe.color=color
             await self.orig_msg.edit(embed=oe, view=None)
         if self.action=="accept":
-            rid={"whitelist":WHITELIST_ROLE_ID,"staff":STAFF_APP_ROLE_ID,"manager":MANAGER_APP_ROLE_ID}.get(self.app_type)
+            rid={"staff":STAFF_APP_ROLE_ID,"manager":MANAGER_APP_ROLE_ID}.get(self.app_type)
             if target and rid:
                 r=guild.get_role(rid)
                 if r:
@@ -596,7 +426,7 @@ class ApplicationDecisionView(discord.ui.View):
 class StartApplicationView(discord.ui.View):
     def __init__(self, app_type):
         super().__init__(timeout=None); self.app_type=app_type
-        lm={"whitelist":"▶️ Start Whitelist","staff":"▶️ Start Staff Application","manager":"▶️ Start Manager Application"}
+        lm={"elas":"▶️ Start ELAS Application","limeniko":"▶️ Start LIMENIKO Application"}
         self.start_btn.label=lm.get(app_type,"▶️ Start"); self.start_btn.custom_id=f"start_app_{app_type}"
     @discord.ui.button(label="▶️ Start", style=discord.ButtonStyle.blurple, custom_id="start_app_placeholder")
     async def start_btn(self, interaction, button):
@@ -604,7 +434,7 @@ class StartApplicationView(discord.ui.View):
             return await interaction.response.send_message(f"🔒 Οι αιτήσεις **{self.app_type.capitalize()}** είναι κλειστές.", ephemeral=True)
         cid=interaction.channel.id
         if cid in active_application_sessions: return await interaction.response.send_message("Αίτηση σε εξέλιξη.", ephemeral=True)
-        qs={"whitelist":WHITELIST_QUESTIONS,"staff":STAFF_QUESTIONS,"manager":MANAGER_QUESTIONS}.get(self.app_type,[])
+        qs={"whitelist":WHITELIST_QUESTIONS,"elas":ELAS_QUESTIONS,"limeniko":LIMENIKO_QUESTIONS}.get(self.app_type,[])
         active_application_sessions[cid]={"user_id":interaction.user.id,"type":self.app_type,"questions":qs,"answers":[],"q_index":0}
         await interaction.response.send_message(f"**Ερώτηση 1/{len(qs)}:**\n{qs[0]}")
 
@@ -615,7 +445,7 @@ class SendApplicationView(discord.ui.View):
     async def send_btn(self, interaction, button):
         if interaction.user.id!=self.uid: return await interaction.response.send_message("❌ Δεν είσαι εσύ.", ephemeral=True)
         guild=interaction.guild
-        rc_id={"whitelist":WHITELIST_RESULTS_CHANNEL_ID,"staff":STAFF_RESULTS_CHANNEL_ID,"manager":MANAGER_RESULTS_CHANNEL_ID}.get(self.app_type)
+        rc_id={"staff":STAFF_RESULTS_CHANNEL_ID,"manager":MANAGER_RESULTS_CHANNEL_ID}.get(self.app_type)
         rc=guild.get_channel(rc_id); member=guild.get_member(self.uid)
         e=discord.Embed(title=f"📋 Αίτηση {self.app_type.capitalize()} — {member.display_name if member else self.uid}", color=discord.Color.blurple())
         e.set_author(name=str(member), icon_url=member.avatar.url if member and member.avatar else None)
@@ -640,9 +470,8 @@ async def handle_application_message(message):
 
 class ApplicationSelect(discord.ui.Select):
     def __init__(self):
-        opts=[discord.SelectOption(label="📋 Whitelist",          description="Αίτηση για να παίξεις", emoji="📋", value="whitelist"),
-              discord.SelectOption(label="👮 Staff Application",  description="Αίτηση για Staff",      emoji="👮", value="staff"),
-              discord.SelectOption(label="👔 Manager Application",description="Αίτηση για Manager",    emoji="👔", value="manager")]
+        opts=[discord.SelectOption(label="📋 Ελληνική Αστυνομία",          description="Αίτηση για Ε.Λ.Α.Σ", emoji="👮", value="elas"),
+              discord.SelectOption(label="👔 Ελληνική Ακτοφυλακή",description="Αίτηση για Ελληνική Ακτοφυλακή",    emoji="⚓", value="limeniko")]
         super().__init__(custom_id="unified_application_select", placeholder="📂 Επίλεξε τύπο αίτησης...", min_values=1, max_values=1, options=opts)
 
     async def callback(self, interaction):
@@ -656,12 +485,12 @@ class ApplicationSelect(discord.ui.Select):
         if ex: return await interaction.response.send_message(f"Έχεις ήδη: {ex.mention}", ephemeral=True)
         ow={guild.default_role: discord.PermissionOverwrite(view_channel=False),
             author: discord.PermissionOverwrite(view_channel=True, send_messages=True, read_message_history=True)}
-        for rid in APPLICATION_MANAGER_ROLES:
+        for rid in : ARXIGOS_ID
             r=guild.get_role(rid)
             if r: ow[r]=discord.PermissionOverwrite(view_channel=True, send_messages=True, read_message_history=True)
         ch=await guild.create_text_channel(name=cname, category=cat, overwrites=ow)
-        tm={"whitelist":"📋 Whitelist Application","staff":"👮 Staff Application","manager":"👔 Manager Application"}
-        dm={"whitelist":"Κάνε αίτηση για whitelist.","staff":"Κάνε αίτηση για Staff.","manager":"Κάνε αίτηση για Manager."}
+        tm={"elas":"👮 Ε.Λ.Α.Σ Application","limeniko":"👔 Ελληνικό Λιμενικό Application"}
+        dm={"elas":"Κάνε αίτηση για Ε.Λ.Α.Σ","limeniko":"Κάνε αίτηση για Λιμενικό."}
         e=discord.Embed(title=tm.get(app,"Application"), description=f"{author.mention}, {dm.get(app,'')}\n\nΠάτα το κουμπί παρακάτω.", color=discord.Color.blurple())
         e.set_image(url=BANNER_APP); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
         e.set_footer(text="Glorious Elas • Applications")
@@ -844,66 +673,12 @@ async def _track_mass_action(guild, moderator, action_type):
     ban_kick_tracker[uid].append(now); ban_kick_tracker[uid]=[t for t in ban_kick_tracker[uid] if now-t<10]
     if len(ban_kick_tracker[uid])>=3:
         ban_kick_tracker[uid]=[]; mm=guild.get_member(int(uid))
-        exempt=[FOUNDER_ROLE_ID,OWNER_ID]; is_ex=mm and any(r.id in exempt for r in mm.roles)
+        exempt=[ARXIGOS_ID]; is_ex=mm and any(r.id in exempt for r in mm.roles)
         if mm and not is_ex:
             try: await mm.timeout(datetime.timedelta(weeks=1), reason=f"Mass {action_type}")
             except: pass
             e=discord.Embed(title=f"⚠️ Mass {action_type.upper()} Detected!", description=f"{mm.mention} έκανε mass {action_type}.\n**1 εβδομάδα timeout** δόθηκε.", color=discord.Color.dark_red(), timestamp=discord.utils.utcnow())
             await send_security_alert(guild, e, ping=True)
-
-# ══════════════════════════════════════════════════════════════
-#  SUGGESTION & REVIEW
-# ══════════════════════════════════════════════════════════════
-class SuggestionModal(discord.ui.Modal, title="💡 Make a Suggestion"):
-    suggestion_input=discord.ui.TextInput(label="Η πρότασή σου", style=discord.TextStyle.paragraph, placeholder="Γράψε εδώ...", required=True, max_length=1000)
-    async def on_submit(self, interaction):
-        ch=interaction.guild.get_channel(SUGGESTION_CHANNEL_ID)
-        if not ch: return await interaction.response.send_message("❌ Κανάλι δεν βρέθηκε.", ephemeral=True)
-        e=discord.Embed(title="💡 Νέα Πρόταση", description=self.suggestion_input.value, color=discord.Color.from_rgb(88,101,242), timestamp=discord.utils.utcnow())
-        e.set_author(name=interaction.user.display_name, icon_url=interaction.user.avatar.url if interaction.user.avatar else None)
-        e.set_thumbnail(url=SERVER_THUMBNAIL_URL); e.set_footer(text=f"User ID: {interaction.user.id} • Glorious Elas")
-        msg=await ch.send(embed=e); await msg.add_reaction("👍"); await msg.add_reaction("👎")
-        await interaction.response.send_message("✅ Στάλθηκε!", ephemeral=True)
-
-class SuggestionPanelView(discord.ui.View):
-    def __init__(self): super().__init__(timeout=None)
-    @discord.ui.button(label="💡 Make a Suggestion", style=discord.ButtonStyle.blurple, custom_id="make_suggestion_btn")
-    async def make_suggestion(self, interaction, button): await interaction.response.send_modal(SuggestionModal())
-
-class ReviewModal(discord.ui.Modal, title="⭐ Make a Review"):
-    review_input=discord.ui.TextInput(label="Το review σου", style=discord.TextStyle.paragraph, placeholder="Γράψε εδώ...", required=True, max_length=1000)
-    def __init__(self, stars): super().__init__(); self.stars=stars
-    async def on_submit(self, interaction):
-        ch=interaction.guild.get_channel(REVIEW_CHANNEL_ID)
-        if not ch: return await interaction.response.send_message("❌ Κανάλι δεν βρέθηκε.", ephemeral=True)
-        sd="⭐"*self.stars+"☆"*(5-self.stars)
-        cm={1:discord.Color.red(),2:discord.Color.orange(),3:discord.Color.yellow(),4:discord.Color.green(),5:discord.Color.from_rgb(255,215,0)}
-        e=discord.Embed(title="⭐ Νέο Review", color=cm.get(self.stars,discord.Color.blurple()), timestamp=discord.utils.utcnow())
-        e.add_field(name="Αξιολόγηση", value=sd, inline=False)
-        e.add_field(name="Σχόλιο", value=self.review_input.value, inline=False)
-        e.set_author(name=interaction.user.display_name, icon_url=interaction.user.avatar.url if interaction.user.avatar else None)
-        e.set_thumbnail(url=SERVER_THUMBNAIL_URL); e.set_footer(text=f"User ID: {interaction.user.id} • Glorious Elas")
-        await ch.send(embed=e); await interaction.response.send_message(f"✅ Review ({sd}) στάλθηκε!", ephemeral=True)
-
-class StarSelect(discord.ui.Select):
-    def __init__(self):
-        opts=[discord.SelectOption(label="⭐ 1 Αστέρι",         emoji="⭐", value="1"),
-              discord.SelectOption(label="⭐⭐ 2 Αστέρια",      emoji="⭐", value="2"),
-              discord.SelectOption(label="⭐⭐⭐ 3 Αστέρια",    emoji="⭐", value="3"),
-              discord.SelectOption(label="⭐⭐⭐⭐ 4 Αστέρια",  emoji="⭐", value="4"),
-              discord.SelectOption(label="⭐⭐⭐⭐⭐ 5 Αστέρια", emoji="⭐", value="5")]
-        super().__init__(custom_id="star_select_review", placeholder="⭐ Επίλεξε αξιολόγηση...", min_values=1, max_values=1, options=opts)
-    async def callback(self, interaction): await interaction.response.send_modal(ReviewModal(int(self.values[0])))
-
-class StarSelectView(discord.ui.View):
-    def __init__(self): super().__init__(timeout=None); self.add_item(StarSelect())
-
-class ReviewPanelView(discord.ui.View):
-    def __init__(self): super().__init__(timeout=None)
-    @discord.ui.button(label="⭐ Make a Review", style=discord.ButtonStyle.blurple, custom_id="make_review_btn")
-    async def make_review(self, interaction, button):
-        e=discord.Embed(title="⭐ Επίλεξε Αξιολόγηση", description="Επίλεξε αστέρια και γράψε σχόλιο!", color=discord.Color.from_rgb(255,215,0))
-        await interaction.response.send_message(embed=e, view=StarSelectView(), ephemeral=True)
 
 # ══════════════════════════════════════════════════════════════
 #  ON MESSAGE
@@ -924,7 +699,7 @@ async def on_message(message):
         await send_security_alert(guild, e, ping=True); return
 
     if guild and URL_PATTERN.search(message.content):
-        exempt=[FOUNDER_ROLE_ID,OWNER_ID]; is_ex=any(r.id in exempt for r in author.roles)
+        exempt=[ARXIGOS_ID]; is_ex=any(r.id in exempt for r in author.roles)
         if not is_ex and not author.guild_permissions.administrator:
             try: await message.delete()
             except: pass
@@ -1009,34 +784,6 @@ async def on_member_join(member):
         try: await member.add_roles(r)
         except: pass
 
-    try:
-        ni=await guild.invites(); nim={i.code:i.uses for i in ni}; inviter=None
-        for code,ou in invite_cache.get(guild.id,{}).items():
-            if nim.get(code,0)>ou:
-                for i in ni:
-                    if i.code==code: inviter=i.inviter; break
-                break
-        invite_cache[guild.id]=nim
-        if inviter:
-            iid=str(inviter.id); mid=str(member.id)
-            if mid not in invite_data: invite_data[mid]={}
-            invite_data[mid]["invited_by"]=iid
-            if iid not in invite_data: invite_data[iid]={"total":0,"real":0,"left":0}
-            invite_data[iid]["total"]=invite_data[iid].get("total",0)+1
-            invite_data[iid]["real"]=invite_data[iid].get("total",0)-invite_data[iid].get("left",0)
-            save_invite_data(invite_data)
-            il=bot.get_channel(INVITE_LOG_CHANNEL_ID)
-            if il:
-                e=discord.Embed(title="📨 Νέο Invite", description=f"{member.mention} μπήκε με invite του {inviter.mention}", color=discord.Color.green(), timestamp=discord.utils.utcnow())
-                e.set_thumbnail(url=member.display_avatar.url)
-                e.add_field(name="📊 Inviter Stats",
-                    value=(f"**Όνομα:** {inviter.display_name}\n"
-                           f"**Συνολικά:** {invite_data[iid].get('total',0)}\n"
-                           f"**Real:** {invite_data[iid].get('real',0)}\n"
-                           f"**Έφυγαν:** {invite_data[iid].get('left',0)}"), inline=False)
-                e.set_footer(text=f"Glorious Elas • Invite Log | User ID: {member.id}")
-                await il.send(embed=e)
-    except Exception as ex: print(f"Invite error: {ex}")
 
     log=bot.get_channel(MEMBER_JOIN_LOG_CHANNEL_ID)
     if log:
@@ -1057,7 +804,7 @@ async def on_member_join(member):
 # ── MODERATION ────────────────────────────────────────────────
 @bot.command()
 async def ban(ctx, member: discord.Member=None, *, reason="No reason"):
-    if not has_staff_permissions(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
+    if not has_arxigos_permissions(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
     if not member: return await ctx.reply("Χρήση: `!ban @user [λόγος]`")
     await member.ban(reason=reason); await ctx.reply(f"🔨 **{member}** banned.")
     log=bot.get_channel(BOT_LOG_ID)
@@ -1065,7 +812,7 @@ async def ban(ctx, member: discord.Member=None, *, reason="No reason"):
 
 @bot.command()
 async def kick(ctx, member: discord.Member=None, *, reason="No reason"):
-    if not has_staff_permissions(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
+    if not has_arxigos_permissions(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
     if not member: return await ctx.reply("Χρήση: `!kick @user [λόγος]`")
     await member.kick(reason=reason); await ctx.reply(f"👢 **{member}** kicked.")
     log=bot.get_channel(BOT_LOG_ID)
@@ -1073,7 +820,7 @@ async def kick(ctx, member: discord.Member=None, *, reason="No reason"):
 
 @bot.command()
 async def timeout(ctx, member: discord.Member=None, minutes: int=None, *, reason="No reason"):
-    if not has_staff_permissions(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
+    if not has_arxigos_permissions(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
     if not member or not minutes: return await ctx.reply("Χρήση: `!timeout @user <minutes> [λόγος]`")
     await member.timeout(datetime.timedelta(minutes=minutes), reason=reason)
     await ctx.reply(f"⏳ **{member}** timeout {minutes} λεπτά.")
@@ -1082,7 +829,7 @@ async def timeout(ctx, member: discord.Member=None, minutes: int=None, *, reason
 
 @bot.command()
 async def clearmessage(ctx, amount: int=None):
-    if not has_staff_permissions(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
+    if not has_arxigos_permissions(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
     if not amount: return await ctx.reply("Χρήση: `!clearmessage <amount>`")
     await ctx.channel.purge(limit=amount+1)
     await ctx.send(f"🧹 Διαγράφηκαν **{amount}** μηνύματα.", delete_after=3)
@@ -1090,7 +837,7 @@ async def clearmessage(ctx, amount: int=None):
 # ── INFO ──────────────────────────────────────────────────────
 @bot.command()
 async def serverstatus(ctx):
-    if not is_staff_or_manager(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
+    if not arxigos(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
     g=ctx.guild
     e=discord.Embed(title="📊 Server Status", color=discord.Color.blurple(), timestamp=discord.utils.utcnow())
     e.set_thumbnail(url=g.icon.url if g.icon else None)
@@ -1102,48 +849,8 @@ async def serverstatus(ctx):
     await ctx.reply(embed=e)
 
 @bot.command()
-async def invites(ctx, member: discord.Member=None):
-    if not is_staff_or_manager(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
-    t=member or ctx.author; uid=str(t.id); d=invite_data.get(uid,{"total":0,"real":0,"left":0})
-    e=discord.Embed(title=f"📨 Invites — {t.display_name}", color=discord.Color.blurple(), timestamp=discord.utils.utcnow())
-    e.set_thumbnail(url=t.display_avatar.url)
-    e.add_field(name="📊 Συνολικά", value=str(d.get("total",0)), inline=True)
-    e.add_field(name="✅ Real",     value=str(d.get("real",0)),  inline=True)
-    e.add_field(name="🚪 Έφυγαν",  value=str(d.get("left",0)),  inline=True)
-    e.set_footer(text="Glorious Elas • Invite Log")
-    await ctx.reply(embed=e)
-
-@bot.command()
-async def serverinvites(ctx):
-    if not is_staff_or_manager(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
-    guild=ctx.guild
-    entries=[]
-    for uid,d in invite_data.items():
-        if not isinstance(d,dict): continue
-        total=d.get("total",0)
-        if total<=0: continue
-        member=guild.get_member(int(uid))
-        name=member.display_name if member else f"User {uid}"
-        entries.append((name,total,d.get("real",0),d.get("left",0)))
-    entries.sort(key=lambda x:x[1], reverse=True)
-    e=discord.Embed(title=f"📨 Server Invites — {guild.name}", color=discord.Color.blurple(), timestamp=discord.utils.utcnow())
-    if guild.icon: e.set_thumbnail(url=guild.icon.url)
-    e.set_image(url=BANNER_SUPPORT)
-    if entries:
-        medals=["🥇","🥈","🥉"]
-        desc=""
-        for i,(name,total,real,left) in enumerate(entries[:20]):
-            medal=medals[i] if i<3 else f"**#{i+1}**"
-            desc+=f"{medal} **{name}** — `{total}` συνολικά | `{real}` real | `{left}` έφυγαν\n"
-        e.description=desc
-    else:
-        e.description="Δεν υπάρχουν δεδομένα invites ακόμα."
-    e.set_footer(text=f"Glorious Elas • {guild.member_count} μέλη συνολικά")
-    await ctx.send(embed=e)
-
-@bot.command()
 async def scan(ctx, member: discord.Member=None):
-    if not is_staff_or_manager(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
+    if not arxigos(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
     await ctx.reply("🔍 Σκανάρω...", delete_after=2); guild=ctx.guild
     if member:
         age=(datetime.datetime.utcnow()-member.created_at.replace(tzinfo=None)).days
@@ -1191,50 +898,32 @@ async def scan(ctx, member: discord.Member=None):
 # ── Owner + Co-Owner + Founder ────────────────────────────────
 @bot.command()
 async def say(ctx, *, message: str):
-    if not is_owner_or_above(ctx.author): return await ctx.reply("❌ Μόνο Owner/Co-Owner/Founder.")
+    if not is_arxigos(ctx.author): return await ctx.reply("❌ Μόνο o Αρχηγός.")
     await ctx.send(message)
     try: await ctx.message.delete()
     except: pass
 
-@bot.command()
-async def say2(ctx, *, message: str):
-    if not is_owner_or_above(ctx.author): return await ctx.reply("❌ Μόνο Owner/Co-Owner/Founder.")
-    guild=ctx.guild
-    e=discord.Embed(description=message, color=discord.Color.from_rgb(20,20,40), timestamp=discord.utils.utcnow())
-    if guild.icon: e.set_thumbnail(url=guild.icon.url)
-    e.set_footer(text=guild.name, icon_url=guild.icon.url if guild.icon else None)
-    await ctx.send(embed=e)
-    try: await ctx.message.delete()
-    except: pass
-
-# ── Founder Only ──────────────────────────────────────────────
-@bot.command()
-async def setaltdays(ctx, days: int=None):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
-    global ALT_ACCOUNT_AGE_DAYS
-    if not days or days<1: return await ctx.reply(f"Τρέχον όριο: **{ALT_ACCOUNT_AGE_DAYS} ημέρες**\nΧρήση: `!setaltdays <ημέρες>`")
-    ALT_ACCOUNT_AGE_DAYS=days; await ctx.reply(f"✅ Νέο όριο: **{days} ημέρες**")
 
 @bot.command()
 async def togglealtban(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
+    if not is_arxigos(ctx.author): return await ctx.reply("❌ Μόνο o Αρχηγός.")
     global ALT_AUTO_KICK
     ALT_AUTO_KICK=not ALT_AUTO_KICK
     await ctx.reply(f"Alt auto-kick: {'✅ **Ενεργό**' if ALT_AUTO_KICK else '❌ **Ανενεργό**'}")
 
 @bot.command()
 async def lockapplication(ctx, app_type: str=None):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
-    valid=["whitelist","staff","manager","all"]
+    if not is_arxigos(ctx.author): return await ctx.reply("❌ Μόνο o Αρχηγός.")
+    valid=["elas","limeniko","all"]
     if not app_type or app_type.lower() not in valid:
         status=""
-        for t in ["whitelist","staff","manager"]:
+        for t in ["elas","limeniko"]:
             status+=f"{'🔒' if t in locked_applications else '🔓'} **{t.capitalize()}**\n"
         e=discord.Embed(title="🔒 Application Lock Status", description=status, color=discord.Color.blurple())
-        e.set_footer(text="Χρήση: !lockapplication <whitelist/staff/manager/all>")
+        e.set_footer(text="Χρήση: !lockapplication")
         return await ctx.reply(embed=e)
     app_type=app_type.lower()
-    targets=["whitelist","staff","manager"] if app_type=="all" else [app_type]
+    targets=["elas","limeniko"] if app_type=="all" else [app_type]
     toggled=[]
     for t in targets:
         if t in locked_applications: locked_applications.remove(t); toggled.append(f"🔓 **{t.capitalize()}** — Ανοιχτό")
@@ -1245,7 +934,7 @@ async def lockapplication(ctx, app_type: str=None):
 
 @bot.command()
 async def ticketpanel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
+    if not is_arxigos(ctx.author): return await ctx.reply("❌ Μόνο o Αρχηγός.")
     e=discord.Embed(title="Glorious Elas — Support Panel",
         description="**Επίλεξε κατηγορία για να ανοίξεις ticket.**\n\n👑 **Ανώτατη Διοίκηση** — Επικοινωνία με Διοίκηση\n💬 **Support** — Γενική υποστήριξη\n📋 **Other** — Άλλο αίτημα\n\n*One active ticket at a time.*",
         color=discord.Color.from_rgb(20,20,40))
@@ -1254,33 +943,13 @@ async def ticketpanel(ctx):
     await ctx.send(embed=e, view=MainTicketPanel()); await ctx.reply("Panel στάλθηκε.", delete_after=2)
 
 @bot.command()
-async def jobpanel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
-    e=discord.Embed(title="Glorious Elas — Job Panel",
-        description="**Επίλεξε υπηρεσία για αίτηση.**\n\n👮 **Ελληνική Αστυνομία**\n⚓ **Λιμενικό**\n\n*One active ticket at a time.*",
-        color=discord.Color.from_rgb(20,20,40))
-    e.set_image(url=BANNER_JOB); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
-    e.set_footer(text="Glorious Elas • Job System")
-    await ctx.send(embed=e, view=JobTicketPanel()); await ctx.reply("Panel στάλθηκε.", delete_after=2)
-
-@bot.command()
-async def donatepanel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
-    e=discord.Embed(title="💎 Glorious Elas — Donate",
-        description="**Θέλεις να κάνεις donate και να στηρίξεις τον server;**\n\nΠάτα το παρακάτω μενού για να ανοίξεις ticket!\nΗ ομάδα μας θα σε εξυπηρετήσει σύντομα.\n\n*One active ticket at a time.*",
-        color=discord.Color.gold())
-    e.set_image(url=BANNER_DONATE); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
-    e.set_footer(text="Glorious Elas • Donate System")
-    await ctx.send(embed=e, view=DonateTicketPanel()); await ctx.reply("Panel στάλθηκε.", delete_after=2)
-
-@bot.command()
 async def applicationpanel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
+    if not is_arxigos(ctx.author): return await ctx.reply("❌ Μόνο o Αρχηγός.")
     lock_info=""
-    for t in ["whitelist","staff","manager"]:
+    for t in ["elas","limeniko"]:
         lock_info+=f"{'🔒' if t in locked_applications else '🔓'} {t.capitalize()}  "
     e=discord.Embed(title="📋 Glorious Elas — Applications",
-        description=f"**Επίλεξε τύπο αίτησης.**\n\n📋 **Whitelist**\n👮 **Staff**\n👔 **Manager**\n\n*Μία ενεργή αίτηση κάθε φορά.*\n\n{lock_info}",
+        description=f"**Επίλεξε τύπο αίτησης. **Ελληνική Αστυνομία**\n👮 **Ελληνικό Λιμενικό**\n⚓ **Μία ενεργή αίτηση κάθε φορά.**\n\n{lock_info}",
         color=discord.Color.from_rgb(20,20,40))
     e.set_image(url=BANNER_APP); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
     e.set_footer(text="Glorious Elas • Applications")
@@ -1288,82 +957,28 @@ async def applicationpanel(ctx):
 
 @bot.command()
 async def whitelistpanel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
+    if not is_arxigos(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
     await ctx.reply("ℹ️ Χρησιμοποίησε `!applicationpanel`!", delete_after=5)
 
 @bot.command()
 async def staffpanel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
+    if not is_arxigos(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
     await ctx.reply("ℹ️ Χρησιμοποίησε `!applicationpanel`!", delete_after=5)
 
 @bot.command()
 async def managerpanel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
+    if not is_arxigos(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
     await ctx.reply("ℹ️ Χρησιμοποίησε `!applicationpanel`!", delete_after=5)
 
 @bot.command()
 async def dutypanel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
-    e=discord.Embed(title="🟢 Staff Duty Panel",
+    if not is_arxigos(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
+    e=discord.Embed(title="🟢 Ε.Λ.Α.Σ Duty Panel",
         description="Πάτα **On Duty** όταν ξεκινάς βάρδια και **Off Duty** όταν τελειώνεις.\n\n"
                     "📋 **Duty Status** — Δες ποιοι είναι on duty τώρα\n"
                     "🏆 **Leaderboard** — Συνολικές ώρες",
         color=discord.Color.green())
     await ctx.send(embed=e, view=DutyView()); await ctx.reply("Panel στάλθηκε.", delete_after=2)
-
-@bot.command()
-async def suggestionpanel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
-    e=discord.Embed(title="💡 Glorious Elas — Suggestions", description="**Έχεις πρόταση;**\nΠάτα το κουμπί, γράψε και στείλε!\nΗ κοινότητα ψηφίζει 👍 / 👎", color=discord.Color.from_rgb(88,101,242))
-    e.set_image(url=BANNER_SUGGEST); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
-    e.set_footer(text="Glorious Elas • Suggestion System")
-    await ctx.send(embed=e, view=SuggestionPanelView()); await ctx.reply("Panel στάλθηκε.", delete_after=2)
-
-@bot.command()
-async def reviewpanel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
-    e=discord.Embed(title="⭐ Glorious Elas — Reviews", description="**Πώς σου φαίνεται ο server;**\nΠάτα, επίλεξε αστέρια (1-5) και γράψε σχόλιο!", color=discord.Color.from_rgb(255,215,0))
-    e.set_image(url=BANNER_REVIEW); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
-    e.set_footer(text="Glorious Elas • Review System")
-    await ctx.send(embed=e, view=ReviewPanelView()); await ctx.reply("Panel στάλθηκε.", delete_after=2)
-
-# ── !panel — Founder ──────────────────────────────────────────
-@bot.command()
-async def panel(ctx):
-    if not is_founder(ctx.author): return await ctx.reply("❌ Μόνο Founder.")
-    e=discord.Embed(title="📌 Glorious Elas — Founder Panel", color=discord.Color.dark_gray(), timestamp=discord.utils.utcnow())
-    e.set_thumbnail(url=ctx.guild.icon.url if ctx.guild.icon else None)
-    e.add_field(name="🛠 Moderation",   value="`!ban` `!kick` `!timeout` `!clearmessage`", inline=False)
-    e.add_field(name="📊 Info",         value="`!serverstatus` `!invites [@user]` `!serverinvites` `!scan [@user]`", inline=False)
-    e.add_field(name="🧰 Utility",      value="`!say <msg>` `!say2 <msg>`", inline=False)
-    e.add_field(name="🔍 Security",     value="`!setaltdays <days>` `!togglealtban`", inline=False)
-    e.add_field(name="📋 Applications", value="`!applicationpanel` `!lockapplication <type>`", inline=False)
-    e.add_field(name="🎫 Panels",       value="`!ticketpanel` `!jobpanel` `!donatepanel` `!suggestionpanel` `!reviewpanel` `!dutypanel`", inline=False)
-    e.set_footer(text=f"Glorious Elas • Founder Panel | {ctx.author}")
-    await ctx.reply(embed=e)
-
-# ── !panel2 — Owner/Co-Owner + Founder ───────────────────────
-@bot.command()
-async def panel2(ctx):
-    if not is_owner_or_above(ctx.author): return await ctx.reply("❌ Μόνο Owner/Co-Owner/Founder.")
-    e=discord.Embed(title="📌 Glorious Elas — Owner Panel", color=discord.Color.gold(), timestamp=discord.utils.utcnow())
-    e.set_thumbnail(url=ctx.guild.icon.url if ctx.guild.icon else None)
-    e.add_field(name="🛠 Moderation",  value="`!ban @user [λόγος]`\n`!kick @user [λόγος]`\n`!timeout @user <minutes> [λόγος]`\n`!clearmessage <amount>`", inline=False)
-    e.add_field(name="📊 Info",        value="`!serverstatus`\n`!invites [@user]`\n`!serverinvites`\n`!scan [@user]`", inline=False)
-    e.add_field(name="🧰 Utility",     value="`!say <msg>`\n`!say2 <msg>`", inline=False)
-    e.set_footer(text=f"Glorious Elas • Owner Panel | {ctx.author}")
-    await ctx.reply(embed=e)
-
-# ── !panel3 — Staff/Manager ───────────────────────────────────
-@bot.command()
-async def panel3(ctx):
-    if not is_staff_or_manager(ctx.author): return await ctx.reply("❌ Δεν έχεις δικαίωμα.")
-    e=discord.Embed(title="📌 Glorious Elas — Staff Panel", color=discord.Color.blurple(), timestamp=discord.utils.utcnow())
-    e.set_thumbnail(url=ctx.guild.icon.url if ctx.guild.icon else None)
-    e.add_field(name="🛠 Moderation",  value="`!ban @user [λόγος]`\n`!kick @user [λόγος]`\n`!timeout @user <minutes> [λόγος]`\n`!clearmessage <amount>`", inline=False)
-    e.add_field(name="📊 Info",        value="`!serverstatus`\n`!invites [@user]`\n`!serverinvites`\n`!scan [@user]`", inline=False)
-    e.set_footer(text=f"Glorious Elas • Staff Panel | {ctx.author}")
-    await ctx.reply(embed=e)
 
 # ══════════════════════════════════════════════════════════════
 #  ON READY
@@ -1371,8 +986,8 @@ async def panel3(ctx):
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}")
-    for v in [MainTicketPanel(), JobTicketPanel(), DonateTicketPanel(), TicketCloseView(),
-              DutyView(), UnifiedApplicationPanel(), SuggestionPanelView(), ReviewPanelView(), StarSelectView()]:
+    for v in [MainTicketPanel(), TicketCloseView(),
+              DutyView(), UnifiedApplicationPanel(), StarSelectView()]:
         bot.add_view(v)
     guild=bot.get_guild(GUILD_ID)
     if guild:
