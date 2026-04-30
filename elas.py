@@ -133,8 +133,8 @@ locked_applications = set()
 async def send_security_alert(guild, embed, ping=True):
     sec_log = bot.get_channel(SECURITY_LOG_CHANNEL_ID)
     if not sec_log: return
-    founder_role = guild.get_role(FOUNDER_ROLE_ID)
-    content = founder_role.mention if (ping and founder_role) else None
+    founder_role = guild.get_role(ARXIGOS_ROLE_ID)
+    content = arxigos_role.mention if (ping and arxigos_role) else None
     asyncio.create_task(sec_log.send(content=content, embed=embed))
 
 # ══════════════════════════════════════════════════════════════
@@ -479,7 +479,7 @@ class ApplicationSelect(discord.ui.Select):
         if app in locked_applications:
             return await interaction.response.send_message(f"🔒 Οι αιτήσεις **{app.capitalize()}** είναι κλειστές.", ephemeral=True)
         guild=interaction.guild; author=interaction.user
-        cat_id={"whitelist":WHITELIST_CATEGORY_ID,"staff":STAFF_CATEGORY_ID,"manager":MANAGER_CATEGORY_ID}.get(app)
+        cat_id={"elas":STAFF_CATEGORY_ID,"limeniko":MANAGER_CATEGORY_ID}.get(app)
         cat=guild.get_channel(cat_id); cname=f"{app}-{author.name}".replace(" ","-").lower()
         ex=discord.utils.get(guild.text_channels, name=cname)
         if ex: return await interaction.response.send_message(f"Έχεις ήδη: {ex.mention}", ephemeral=True)
@@ -755,7 +755,7 @@ async def on_member_join(member):
         e.set_footer(text="Glorious Elas • Security Log")
         sl=bot.get_channel(SECURITY_LOG_CHANNEL_ID)
         if sl:
-            or_=guild.get_role(OWNER_ID); c=or_.mention if or_ else None
+            or_=guild.get_role(ARXIGOS_ID); c=or_.mention if or_ else None
             msg=await sl.send(content=c, embed=e, view=BotVerificationView(member))
             pending_bots[str(member.id)]=msg.id
         return
