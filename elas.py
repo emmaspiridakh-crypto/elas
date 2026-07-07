@@ -128,14 +128,14 @@ async def on_voice_state_update(member, before, after):
         e.set_thumbnail(url=member.display_avatar.url)
         e.add_field(name="👤 Χρήστης", value=f"{member.mention} (`{member.id}`)", inline=True)
         e.add_field(name="🔊 Κανάλι",  value=f"**{after.channel.name}**", inline=True)
-        e.set_footer(text=f"FBI 780 • Voice Log | User ID: {member.id}")
+        e.set_footer(text=f"FBI • Voice Log | User ID: {member.id}")
         await log.send(embed=e)
     elif before.channel and not after.channel:
         e = discord.Embed(title="🔇 Voice Leave", color=discord.Color.red(), timestamp=discord.utils.utcnow())
         e.set_thumbnail(url=member.display_avatar.url)
         e.add_field(name="👤 Χρήστης", value=f"{member.mention} (`{member.id}`)", inline=True)
         e.add_field(name="🔇 Κανάλι",  value=f"**{before.channel.name}**", inline=True)
-        e.set_footer(text=f"FBI 780 • Voice Log | User ID: {member.id}")
+        e.set_footer(text=f"FBI • Voice Log | User ID: {member.id}")
         await log.send(embed=e)
     elif before.channel != after.channel:
         e = discord.Embed(title="🔀 Voice Move", color=discord.Color.yellow(), timestamp=discord.utils.utcnow())
@@ -143,7 +143,7 @@ async def on_voice_state_update(member, before, after):
         e.add_field(name="👤 Χρήστης", value=f"{member.mention} (`{member.id}`)", inline=False)
         e.add_field(name="📤 Από",     value=f"**{before.channel.name}**", inline=True)
         e.add_field(name="📥 Σε",      value=f"**{after.channel.name}**",  inline=True)
-        e.set_footer(text=f"FBI 780 • Voice Log | User ID: {member.id}")
+        e.set_footer(text=f"FBI • Voice Log | User ID: {member.id}")
         await log.send(embed=e)
  
 @bot.event
@@ -160,7 +160,7 @@ async def on_guild_role_create(role):
     e.add_field(name="🎨 Χρώμα",  value=str(role.color),     inline=True)
     e.add_field(name="👤 Από",     value=moderator,           inline=True)
     e.add_field(name="🆔 Role ID", value=f"`{role.id}`",      inline=True)
-    e.set_footer(text="FBI 780 • Role Log")
+    e.set_footer(text="FBI • Role Log")
     await log.send(embed=e)
  
 @bot.event
@@ -176,7 +176,7 @@ async def on_guild_role_delete(role):
     e.add_field(name="📛 Όνομα",   value=f"**{role.name}**", inline=True)
     e.add_field(name="👤 Από",     value=moderator,           inline=True)
     e.add_field(name="🆔 Role ID", value=f"`{role.id}`",      inline=True)
-    e.set_footer(text="FBI 780 • Role Log")
+    e.set_footer(text="FBI • Role Log")
     await log.send(embed=e)
  
 @bot.event
@@ -193,7 +193,7 @@ async def on_member_update(before, after):
                 e.add_field(name="👤 Χρήστης",   value=f"{after.mention} (`{after.id}`)", inline=True)
                 e.add_field(name="🎭 Ρόλος",     value=f"**{new_role.name}**",            inline=True)
                 e.add_field(name="🛡️ Moderator", value=entry.user.mention,               inline=True)
-                e.set_footer(text=f"FBI 780 • Role Log | Role ID: {new_role.id}")
+                e.set_footer(text=f"FBI • Role Log | Role ID: {new_role.id}")
                 await log.send(embed=e); break
     elif len(after.roles) < len(before.roles):
         removed = next(r for r in before.roles if r not in after.roles)
@@ -204,7 +204,7 @@ async def on_member_update(before, after):
                 e.add_field(name="👤 Χρήστης",   value=f"{after.mention} (`{after.id}`)", inline=True)
                 e.add_field(name="🎭 Ρόλος",     value=f"**{removed.name}**",             inline=True)
                 e.add_field(name="🛡️ Moderator", value=entry.user.mention,               inline=True)
-                e.set_footer(text=f"FBI 780 • Role Log | Role ID: {removed.id}")
+                e.set_footer(text=f"FBI • Role Log | Role ID: {removed.id}")
                 await log.send(embed=e); break
  
 @bot.event
@@ -223,7 +223,7 @@ async def on_guild_channel_create(channel):
     if hasattr(channel, "category") and channel.category:
         e.add_field(name="🗂️ Κατηγορία", value=channel.category.name,     inline=True)
     e.add_field(name="🆔 Channel ID", value=f"`{channel.id}`",             inline=True)
-    e.set_footer(text="FBI 780 • Channel Log")
+    e.set_footer(text="FBI • Channel Log")
     await log.send(embed=e)
  
 @bot.event
@@ -240,7 +240,7 @@ async def on_guild_channel_delete(channel):
     e.add_field(name="📂 Τύπος",      value=str(channel.type).capitalize(), inline=True)
     e.add_field(name="👤 Από",        value=moderator,                      inline=True)
     e.add_field(name="🆔 Channel ID", value=f"`{channel.id}`",             inline=True)
-    e.set_footer(text="FBI 780 • Channel Log")
+    e.set_footer(text="FBI • Channel Log")
     await log.send(embed=e)
  
 @bot.event
@@ -255,7 +255,7 @@ async def on_message_edit(before, after):
     e.add_field(name="📝 Πριν",    value=before.content[:1020] or "*[κενό]*", inline=False)
     e.add_field(name="📝 Μετά",    value=after.content[:1020]  or "*[κενό]*", inline=False)
     e.add_field(name="🔗 Link",    value=f"[Πήγαινε στο μήνυμα]({after.jump_url})", inline=False)
-    e.set_footer(text=f"FBI 780 • Message Log | User ID: {before.author.id}")
+    e.set_footer(text=f"FBI • Message Log | User ID: {before.author.id}")
     await log.send(embed=e)
  
 @bot.event
@@ -270,7 +270,7 @@ async def on_message_delete(message):
     e.add_field(name="📝 Περιεχόμενο", value=message.content[:1020] or "*[χωρίς κείμενο]*", inline=False)
     if message.attachments:
         e.add_field(name="📎 Αρχεία", value="\n".join(a.filename for a in message.attachments), inline=False)
-    e.set_footer(text=f"FBI 780 • Message Log | User ID: {message.author.id}")
+    e.set_footer(text=f"FBI • Message Log | User ID: {message.author.id}")
     await log.send(embed=e)
  
 # ══════════════════════════════════════════════════════════════
@@ -287,7 +287,7 @@ class TicketCloseView(discord.ui.View):
             e.set_thumbnail(url=interaction.user.display_avatar.url)
             e.add_field(name="🔒 Έκλεισε από", value=interaction.user.mention, inline=True)
             e.add_field(name="📁 Κανάλι",       value=interaction.channel.mention, inline=True)
-            e.set_footer(text="FBI 780 • Ticket Log")
+            e.set_footer(text="FBI • Ticket Log")
             await lc.send(embed=e)
         await interaction.response.send_message("Κλείνει σε 4 δευτερόλεπτα...")
         await asyncio.sleep(4)
@@ -317,7 +317,7 @@ class MainTicketButton(discord.ui.View):
             color=discord.Color.from_rgb(20, 20, 40)
         )
         e.set_image(url=BANNER_SUPPORT); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
-        e.set_footer(text="FBI 780 • Support System")
+        e.set_footer(text="FBI • Support System")
         await ch.send(embed=e, view=TicketCloseView())
         lc = guild.get_channel(TICKET_LOG_ID)
         if lc:
@@ -326,7 +326,7 @@ class MainTicketButton(discord.ui.View):
             le.add_field(name="👤 Από",    value=author.mention,  inline=True)
             le.add_field(name="📋 Τύπος", value="Support",        inline=True)
             le.add_field(name="📁 Κανάλι",value=ch.mention,       inline=True)
-            le.set_footer(text="FBI 780 • Ticket Log")
+            le.set_footer(text="FBI • Ticket Log")
             await lc.send(embed=le)
         await interaction.response.send_message(f"Δημιουργήθηκε: {ch.mention}", ephemeral=True)
  
@@ -451,7 +451,7 @@ class ApplicationButton(discord.ui.View):
         ch=await guild.create_text_channel(name=cname, category=cat, overwrites=ow)
         e=discord.Embed(title="🔍 FBI Application", description=f"{author.mention}, κάνε αίτηση για FBI.\n\nΠάτα το κουμπί παρακάτω.", color=discord.Color.blurple())
         e.set_image(url=BANNER_APP); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
-        e.set_footer(text="FBI 780 • Applications")
+        e.set_footer(text="FBI • Applications")
         await ch.send(embed=e, view=StartApplicationView(app))
         await interaction.response.send_message(f"Δημιουργήθηκε: {ch.mention}", ephemeral=True)
  
@@ -484,7 +484,7 @@ class DutyView(discord.ui.View):
         if log:
             e=discord.Embed(title="🟢 On Duty", description=f"{interaction.user.mention} μπήκε On Duty.", color=discord.Color.green(), timestamp=discord.utils.utcnow())
             e.set_thumbnail(url=interaction.user.display_avatar.url)
-            e.set_footer(text=f"FBI 780 • Duty Log | User ID: {interaction.user.id}")
+            e.set_footer(text=f"FBI • Duty Log | User ID: {interaction.user.id}")
             await log.send(embed=e)
         await interaction.response.send_message("✅ Είσαι On Duty!", ephemeral=True)
  
@@ -510,7 +510,7 @@ class DutyView(discord.ui.View):
             e.set_thumbnail(url=interaction.user.display_avatar.url)
             e.add_field(name="⏱ Session", value=ds,              inline=True)
             e.add_field(name="📊 Σύνολο", value=f"{th}ω {tm2}λ", inline=True)
-            e.set_footer(text=f"FBI 780 • Duty Log | User ID: {interaction.user.id}")
+            e.set_footer(text=f"FBI • Duty Log | User ID: {interaction.user.id}")
             await log.send(embed=e)
         await interaction.response.send_message(f"✅ Off Duty! Session: **{ds}** | Σύνολο: **{th}ω {tm2}λ**", ephemeral=True)
  
@@ -531,10 +531,10 @@ class DutyView(discord.ui.View):
         e=discord.Embed(title="📋 Duty Status", color=discord.Color.blurple(), timestamp=discord.utils.utcnow())
         if on_duty_members:
             e.description="\n".join(f"🟢 {m.mention} — `{dur}`" for m,dur in on_duty_members)
-            e.set_footer(text=f"{len(on_duty_members)} άτομα on duty | FBI 780")
+            e.set_footer(text=f"{len(on_duty_members)} άτομα on duty | FBI")
         else:
             e.description="❌ Κανένας δεν είναι On Duty αυτή τη στιγμή."
-            e.set_footer(text="FBI 780 • Duty Status")
+            e.set_footer(text="FBI • Duty Status")
         await interaction.response.send_message(embed=e, ephemeral=True)
  
     @discord.ui.button(label="🏆 Leaderboard", style=discord.ButtonStyle.grey, custom_id="duty_leaderboard_btn", row=1)
@@ -557,7 +557,7 @@ class DutyView(discord.ui.View):
             is_on=" 🟢" if (member and dr and dr in member.roles) else ""
             desc+=f"{medal} {name}{is_on} — `{h}ω {mn}λ`\n"
         e.description=desc or "Κανένας δεν έχει κάνει duty ακόμα."
-        e.set_footer(text="🟢 = Τώρα on duty | FBI 780")
+        e.set_footer(text="🟢 = Τώρα on duty | FBI")
         await interaction.response.send_message(embed=e, ephemeral=True)
  
 # ══════════════════════════════════════════════════════════════
@@ -613,7 +613,7 @@ async def on_member_remove(member):
         e.add_field(name="📛 Username",   value=str(member), inline=True)
         e.add_field(name="👥 Μέλη τώρα", value=str(member.guild.member_count), inline=True)
         e.add_field(name="🎭 Ρόλοι",     value=" ".join(roles) if roles else "Κανένας", inline=False)
-        e.set_footer(text=f"FBI 780 • Member Log | User ID: {member.id}")
+        e.set_footer(text=f"FBI • Member Log | User ID: {member.id}")
         await log.send(embed=e)
  
 async def _track_mass_action(guild, moderator, action_type):
@@ -644,7 +644,7 @@ async def on_message(message):
         e.set_thumbnail(url=author.display_avatar.url)
         e.add_field(name="👤 Χρήστης", value=f"{author.mention} (`{author.id}`)", inline=True)
         e.add_field(name="📢 Κανάλι",  value=message.channel.mention, inline=True)
-        e.set_footer(text="FBI 780 • Security Log")
+        e.set_footer(text="FBI • Security Log")
         await send_security_alert(guild, e, ping=True); return
  
     if guild and URL_PATTERN.search(message.content):
@@ -658,7 +658,7 @@ async def on_message(message):
             e.set_thumbnail(url=author.display_avatar.url)
             e.add_field(name="👤 Χρήστης", value=f"{author.mention} (`{author.id}`)", inline=True)
             e.add_field(name="📢 Κανάλι",  value=message.channel.mention, inline=True)
-            e.set_footer(text="FBI 780 • Security Log")
+            e.set_footer(text="FBI • Security Log")
             await send_security_alert(guild, e, ping=False); return
  
     if guild:
@@ -674,7 +674,7 @@ async def on_message(message):
                 e.set_thumbnail(url=author.display_avatar.url)
                 e.add_field(name="👤 Χρήστης", value=f"{author.mention} (`{author.id}`)", inline=True)
                 e.add_field(name="📢 Κανάλι",  value=message.channel.mention, inline=True)
-                e.set_footer(text="FBI 780 • Security Log")
+                e.set_footer(text="FBI • Security Log")
                 await send_security_alert(guild, e, ping=False)
  
     handled=await handle_application_message(message)
@@ -701,7 +701,7 @@ async def on_member_join(member):
             description=f"**{member}** ({member.mention}) μπήκε.\n\n**Τύπος:** {bt}\n**ID:** `{member.id}`\n**Δημιουργήθηκε:** <t:{int(member.created_at.timestamp())}:F>\n\n⚠️ Μηδενικά permissions μέχρι Accept.",
             color=color, timestamp=discord.utils.utcnow())
         e.set_thumbnail(url=member.display_avatar.url)
-        e.set_footer(text="FBI 780 • Security Log")
+        e.set_footer(text="FBI • Security Log")
         sl=bot.get_channel(SECURITY_LOG_CHANNEL_ID)
         if sl:
             or_=guild.get_role(DIRECTOR_ID); c=or_.mention if or_ else None
@@ -724,7 +724,7 @@ async def on_member_join(member):
                 e.add_field(name="⚡ Ενέργεια", value=f"❌ Απέτυχε: {err}", inline=False)
         else:
             e.add_field(name="⚡ Ενέργεια", value="⚠️ Μόνο ειδοποίηση", inline=False)
-        e.set_footer(text="FBI 780 • Security Log")
+        e.set_footer(text="FBI • Security Log")
         await send_security_alert(guild, e, ping=True)
         if ALT_AUTO_KICK: return
  
@@ -741,7 +741,7 @@ async def on_member_join(member):
         e.add_field(name="📛 Username",     value=str(member), inline=True)
         e.add_field(name="📅 Λογαριασμός", value=f"<t:{int(member.created_at.timestamp())}:R>", inline=True)
         e.add_field(name="👥 Μέλη τώρα",   value=str(guild.member_count), inline=True)
-        e.set_footer(text=f"FBI 780 • Member Log | User ID: {member.id}")
+        e.set_footer(text=f"FBI • Member Log | User ID: {member.id}")
         await log.send(embed=e)
  
 # ══════════════════════════════════════════════════════════════
@@ -784,7 +784,7 @@ async def serverstatus(ctx):
     e.add_field(name="🤖 Bots",    value=sum(1 for m in g.members if m.bot))
     e.add_field(name="🟢 Online",  value=sum(1 for m in g.members if m.status!=discord.Status.offline))
     e.add_field(name="🚀 Boosts",  value=g.premium_subscription_count)
-    e.set_footer(text="FBI 780 • Server Status")
+    e.set_footer(text="FBI • Server Status")
     await ctx.reply(embed=e)
  
 @bot.command()
@@ -815,7 +815,7 @@ async def scan(ctx, member: discord.Member=None):
             inline=True)
         e.add_field(name="🎭 Ρόλοι", value=", ".join(r.mention for r in member.roles[1:]) or "Κανένας", inline=False)
         e.add_field(name=f"📋 Τελευταίες Ενέργειες ({len(al)})", value="\n".join(al) if al else "Καμία", inline=False)
-        e.set_footer(text="FBI 780 • Scan")
+        e.set_footer(text="FBI • Scan")
         await ctx.send(embed=e); return
     admins=[]; newa=[]; bl=[]; sus=[]
     for m in guild.members:
@@ -831,7 +831,7 @@ async def scan(ctx, member: discord.Member=None):
     e.add_field(name=f"🤖 Bots ({len(bl)}) ✅/⚠️",                            value="\n".join(bl[:10])     or "Κανένα",  inline=False)
     e.add_field(name=f"⚠️ Νέοι < {ALT_ACCOUNT_AGE_DAYS} ημέρες ({len(newa)})", value="\n".join(newa[:10])   or "Κανένας", inline=False)
     e.add_field(name=f"🚨 Ύποπτα ({len(sus)})",                                value="\n".join(sus[:10])    or "✅ Τίποτα",inline=False)
-    e.set_footer(text=f"FBI 780 • Scan | {guild.member_count} μέλη")
+    e.set_footer(text=f"FBI • Scan | {guild.member_count} μέλη")
     await ctx.send(embed=e)
  
 @bot.command()
@@ -874,7 +874,7 @@ async def ticketpanel(ctx):
         description="**Πάτα το κουμπί παρακάτω για να ανοίξεις ticket.**\n\n🎫 **Support** — Επικοινωνία με Director\n\n*One active ticket at a time.*",
         color=discord.Color.from_rgb(20,20,40))
     e.set_image(url=BANNER_SUPPORT); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
-    e.set_footer(text="FBI 780 • Support System")
+    e.set_footer(text="FBI • Support System")
     await ctx.send(embed=e, view=MainTicketButton()); await ctx.reply("Panel στάλθηκε.", delete_after=2)
  
 @bot.command()
@@ -885,7 +885,7 @@ async def applicationpanel(ctx):
         description=f"**Κάνε αίτηση για το FBI.**\n\n🔍 **FBI** — Federal Bureau of Investigation\n\n*Μία ενεργή αίτηση κάθε φορά. Έχεις 20 λεπτά να ολοκληρώσεις την αίτηση αλλιώς θα απορριφθεί.*\n\n{lock_info}",
         color=discord.Color.from_rgb(20,20,40))
     e.set_image(url=BANNER_APP); e.set_thumbnail(url=SERVER_THUMBNAIL_URL)
-    e.set_footer(text="FBI 780 • Applications")
+    e.set_footer(text="FBI • Applications")
     await ctx.send(embed=e, view=ApplicationButton()); await ctx.reply("Panel στάλθηκε.", delete_after=2)
  
 @bot.command()
@@ -909,7 +909,7 @@ async def panel(ctx):
     e.add_field(name="🔍 Security",     value="`!togglealtban`", inline=False)
     e.add_field(name="📋 Applications", value="`!applicationpanel` `!lockapplication <fbi/all>`", inline=False)
     e.add_field(name="🎫 Panels",       value="`!ticketpanel` `!dutypanel`", inline=False)
-    e.set_footer(text=f"FBI 780 • Director Panel | {ctx.author}")
+    e.set_footer(text=f"FBI • Director Panel | {ctx.author}")
     await ctx.reply(embed=e)
  
 # ══════════════════════════════════════════════════════════════
@@ -926,7 +926,7 @@ async def on_ready():
             invs=await guild.invites()
             print(f"Loaded {len(invs)} invites into cache.")
         except Exception as e: print(f"Invites error: {e}")
-    await bot.change_presence(activity=discord.Game(name="FBI 780"))
+    await bot.change_presence(activity=discord.Game(name="FBI"))
     print("Bot fully online!")
  
 if __name__=="__main__":
